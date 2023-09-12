@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nomoz vaqtlari</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <header class="site-header site">
+        <div class="container">
+            <button class="gray">👁️</button>
+            <div class="header__top">
+                <a class="site__link" href="#">
+                    <span class="site__link-name">Nomoz vaqtlari</span>
+                </a>
+                <nav class="site__nav">
+                    <ul class="site__list">
+                        <li class="site__item">
+                            <a class="site__uzb-link" href="#">
+                                Uz
+                            </a>
+                        </li>
+                        <li class="site__city">
+                            <form class="form">
+                                <select class="select">
+                                    <option value="Toshkent">Toshkent</option>
+                                    <option value="Samarqand">Samarqand</option>
+                                    <option value="Andijon">Andijon</option>
+                                    <option value="Namangan">Namangan</option>
+                                    <option value="Farg'ona">Farg'ona</option>
+                                    <option value="Surxondaryo">Surxondaryo</option>
+                                    <option value="Buxoro">Buxoro</option>
+                                    <option value="Navoiy">Navoiy</option>
+                                    <option value="Xiva">Xiva</option>
+                                    <option value="Nukus">Nukus</option>
+                                </select>
+                                <button class="search__btn" type="submit">🔍</button>
+                            </form>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="header__bottom ">
+                <h1 class="header__bottom-title">
+                    <span class="header__bottom-cityname">Toshkent</span>
+                    nomoz vaqtlari
+                </h1>
+                <div class="header__bottom-link bottom-link-part">
+                    <a href="#" class="bottom-link-part__link kunlik" target="_parent">Kunlik</a>
+                    <a href="#" class="bottom-link-part__link haftalik" target="_parent">Haftalik</a>
+                    <a href="#" class="bottom-link-part__link oylik" target="_parent"> Oylik</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="site-main">
+        <section class="site-section section">
+            <div class="container">
+                <div class="section__wrapper">
+                    <ul class="site__list-render render-list">
+                        <template class="template">
+                            <li class="site__item">
+                                <ul class="render-list__in">
+                                    <li class="site-item__in  site-item__in--one">
+                                        <time class="time__bomdod time">04:38</time>
+                                        <p class="site__namoz-name">
+                                            bomdod
+                                        </p>
+                                    </li>
+                                    <li class="site-item__in site-item__in--twoo">
+                                        <time class="time__quyosh time">04:38</time>
+                                        <p class="site__namoz-name">
+                                            Quyosh
+                                        </p>
+                                    </li>
+                                    <li class="site-item__in site-item__in--three">
+                                        <time class="time__peshin time">04:38</time>
+                                        <p class="site__namoz-name">
+                                            Peshin
+                                        </p>
+                                    </li>
+                                    <li class="site-item__in site-item__in--four">
+                                        <time class="time__asr time">04:38</time>
+                                        <p class="site__namoz-name">
+                                            Asr
+                                        </p>
+                                    </li>
+                                    <li class="site-item__in site-item__in--five">
+                                        <time class="time__shom time">04:38</time>
+                                        <p class="site__namoz-name">
+                                            Shom
+                                        </p>
+                                    </li>
+                                    <li class="site-item__in site-item__in--six">
+                                        <time class="time__xufton time">04:38</time>
+                                        <p class="site__namoz-name">
+                                            Xufton
+                                        </p>
+                                    </li>
+
+                                </ul>
+                            </li>
+                        </template>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="site-table">
+            <div class="container">
+                <table class="site-table__table table">
+                    <thead class="table__header">
+                        <tr class="table__row">
+                            <td class="table__heading">
+                                Kun
+                            </td>
+                            <td class="table__heading">
+                                Sana
+                            </td>
+                            <td class="table__heading">
+                                Saharlik
+                            </td>
+                            <td class="table__heading">
+                                Quyosh
+                            </td>
+                            <td class="table__heading">
+                                Peshin
+                            </td>
+                            <td class="table__heading">
+                                Asr
+                            </td>
+                            <td class="table__heading">
+                                Shom
+                            </td>
+                            <td class="table__heading">
+                                Xufton
+                            </td>
+                        </tr>
+                    </thead>
+
+                    <tbody class="table__body">
+                        <template class="table__template">
+                            <tr class="table__row-name">
+                                <td class="table__info info__kun"></td>
+                                <td class="table__info info__sana"></td>
+                                <td class="table__info info__saharlik"></td>
+                                <td class="table__info info__quyosh"></td>
+                                <td class="table__info info__peshin"></td>
+                                <td class="table__info info__asr"></td>
+                                <td class="table__info info__shom"></td>
+                                <td class="table__info info__xufton"></td>
+                            </tr>
+                        </template>
+                    </tbody>
+
+                </table>
+            </div>
+
+        </section>
+
+
+        <!--    oylik table  -->
+
+
+        <section class="site-section-table">
+            <div class="container">
+
+                <form class="monthform">
+                    <select class="monthselect">
+                        <option value="1">1-oy</option>
+                        <option value="2">2-oy</option>
+                        <option value="3">3-oy</option>
+                        <option value="4">4-oy</option>
+                        <option value="5">5-oy</option>
+                        <option value="6">6-oy</option>
+                        <option value="7">7-oy</option>
+                        <option value="8">8-oy</option>
+                        <option value="9">9-oy</option>
+                        <option value="10">10-oy</option>
+                        <option value="11">11-oy</option>
+                        <option value="12">12-oy</option>
+                    </select>
+                    <button type="submit" class="search__btn">
+                        🔎
+                    </button>
+                </form>
+
+                <table class="table__month month">
+                    <thead class="month__head">
+                        <tr class="month__row">
+                            <td class="month__heading kun">
+                                Kun
+                            </td>
+                            <td class="month__heading data">
+                                Sana
+                            </td>
+                            <td class="month__heading Saharlik">
+                                Saharlik
+                            </td>
+                            <td class="month__heading Quyosh">
+                                Quyosh
+                            </td>
+                            <td class="month__heading Peshin">
+                                Peshin
+                            </td>
+                            <td class="month__heading Asr">
+                                Asr
+                            </td>
+                            <td class="month__heading  Shom">
+                                Shom
+                            </td>
+                            <td class="month__heading Hufton">
+                                Hufton
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody class="month__body">
+                        <template class="month__template">
+                            <tr class="month__row">
+                                <td class="month__info month_day"></td>
+                                <td class="month__info month__data"></td>
+                                <td class="month__info month__saharlik"></td>
+                                <td class="month__info month__quyosh"></td>
+                                <td class="month__info month__peshin"></td>
+                                <td class="month__info month__asr"></td>
+                                <td class="month__info month__shom"></td>
+                                <td class="month__info month__hufton"></td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+
+    </footer>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

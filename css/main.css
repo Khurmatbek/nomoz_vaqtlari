@@ -1,0 +1,278 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: monospace;
+    text-justify: inter-word;
+    background-repeat: no-repeat;
+    background-size: 100%, 100%;
+    background-position: center;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    background-color: #0f9c5a49;
+}
+.container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.header__top {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.site__link {
+    display: inline-block;
+    text-decoration: none;
+}
+.site__link-name {
+    display: flex;
+    align-items: center;
+    color: #1d832a;
+    font-size: 18px;
+}
+.site__link-name::before {
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    background-image: url("https://namozvaqti.uz/img/logo_new.png");
+    background-size: 35px 35px;
+    background-repeat: no-repeat;
+    content: "";
+}
+
+.site__list {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    gap: 5px;
+    border: 2px;
+}
+.site__item {
+    padding: 5px;
+    background-color: #198754;
+    border-radius: 6px;
+    color: white;
+}
+.site__item::marker {
+    display: none;
+}
+.site__uzb-link {
+    text-decoration: none;
+    color: white;
+}
+.site__city {
+    min-width: 113px;
+    width: 100%;
+}
+.site_city-btn {
+    padding: 5px;
+    outline: none;
+    background-color: #198754;
+    color: white;
+    border: none;
+    border-radius: 6px;
+}
+.header__bottom {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+.header__bottom-title {
+    padding: 10px;
+    color: white;
+    margin: 0;
+    margin-top: 10px;
+    background-color: #198754;
+    border-radius: 8px;
+}
+
+.select {
+    position: relative;
+    padding: 8.5px;
+    background-color: #198754;
+    color: white;
+    outline: none;
+    border-radius: 8px;
+}
+.search__btn {
+    font-size: 18px;
+    width: 35px;
+    height: 35px;
+    border: none;
+    background: green;
+    border-radius: 30px;
+}
+.site__city:nth-child(5) {
+    display: flex;
+    justify-content: space-between;
+}
+.render-list {
+    margin: 0;
+    padding: 0;
+    padding-top: 100px;
+}
+.render-list__in {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    gap: 15px;
+    justify-content: center;
+}
+.site-item__in {
+    max-width: 200px;
+    width: 100%;
+    border: 2px solid white;
+    text-align: center;
+    padding: 10px;
+}
+.form {
+    width: 160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.site__namoz-name {
+    margin: 0;
+    margin-top: 15px;
+    font-size: 18px;
+}
+.time {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+.gray {
+    position: fixed;
+    text-align: center;
+    z-index: 10;
+    margin-top: 0px;
+    margin-left: -17px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(213, 165, 6);
+    font-size: 25px;
+    padding: 5px;
+}
+.dark {
+    filter: grayscale(100%);
+}
+
+/*   kunlik oylik haftalik part */
+
+.header__bottom-link {
+    margin: 0 auto;
+    max-width: 280px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 2px;
+
+    background-color: #198754;
+    border-radius: 8px;
+}
+.bottom-link-part__link {
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border: 1.6px solid white;
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+}
+.display {
+    display: none;
+}
+
+.site-table {
+    margin-top: 80px;
+    overflow-x: scroll;
+    display: none;
+}
+/*  table part */
+.table,
+.table__month {
+    margin-top: 30px;
+    width: 100%;
+    background-color: #198754;
+    color: white;
+}
+
+table,
+td,
+tr,
+th {
+    border: 1px solid white;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+.table__heading {
+    min-width: 100px;
+    max-width: 150px;
+    padding: 10px;
+}
+.block {
+    display: block;
+}
+.border {
+    border-color: orangered;
+    border-style: dashed double dashed;
+    background-color: rgb(213, 165, 6);
+}
+
+.site-section-table {
+    margin-top: 80px;
+    overflow-x: scroll;
+    display: none;
+}
+.last{
+    display: block;
+}
+@media only screen and (min-width: 320px) and (max-width: 481px) {
+    .header__top {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media only screen and (min-width: 1000px) {
+    .site__link-name {
+        font-size: 22px;
+    }
+    .site-table {
+        overflow-x: hidden;
+    }
+    .site__nav {
+        width: 400px;
+    }
+    .site__list {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .site__city {
+        margin-left: auto;
+    }
+    .select {
+        width: 200px;
+    }
+    .form {
+        width: 100%;
+    }
+}
