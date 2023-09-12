@@ -32,7 +32,7 @@ body {
 }
 .site__link-name {
     display: flex;
-    align-items: center;
+    align-items:center;
     color: #1d832a;
     font-size: 18px;
 }
@@ -60,6 +60,7 @@ body {
     background-color: #198754;
     border-radius: 6px;
     color: white;
+    border: 2px solid white;
 }
 .site__item::marker {
     display: none;
@@ -93,6 +94,7 @@ body {
     margin-top: 10px;
     background-color: #198754;
     border-radius: 8px;
+    border: 2px solid white;
 }
 
 .select {
@@ -102,6 +104,7 @@ body {
     color: white;
     outline: none;
     border-radius: 8px;
+    border: 2px solid white;
 }
 .search__btn {
     font-size: 18px;
@@ -109,6 +112,7 @@ body {
     height: 35px;
     border: none;
     background: green;
+    border:2px solid white;
     border-radius: 30px;
 }
 .site__city:nth-child(5) {
@@ -140,7 +144,7 @@ body {
 .form {
     width: 160px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 .site__namoz-name {
@@ -162,10 +166,11 @@ body {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: none;
-    background-color: rgb(213, 165, 6);
-    font-size: 25px;
+    border:  2px solid white;
+    background-color:green;
+    font-size: 22px;
     padding: 5px;
+
 }
 .dark {
     filter: grayscale(100%);
@@ -182,8 +187,8 @@ body {
     justify-content: space-between;
     gap: 10px;
     padding: 2px;
-
     background-color: #198754;
+    border: 2px solid white;
     border-radius: 8px;
 }
 .bottom-link-part__link {
@@ -213,7 +218,6 @@ body {
     background-color: #198754;
     color: white;
 }
-
 table,
 td,
 tr,
@@ -243,9 +247,19 @@ th {
     overflow-x: scroll;
     display: none;
 }
-.last{
+.last {
     display: block;
 }
+.monthform {
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 2px solid white;
+    background-color: rgba(18, 18, 18, 0.392);
+}
+
 @media only screen and (min-width: 320px) and (max-width: 481px) {
     .header__top {
         display: flex;
@@ -254,7 +268,8 @@ th {
 }
 @media only screen and (min-width: 1000px) {
     .site__link-name {
-        font-size: 22px;
+        font-size: 30px;
+        font-weight: 700;
     }
     .site-table {
         overflow-x: hidden;
@@ -274,5 +289,10 @@ th {
     }
     .form {
         width: 100%;
+    }
+    .site__link-name::before {
+        width: 40px;
+        height: 40px;
+        background-size: 40px 40px;
     }
 }

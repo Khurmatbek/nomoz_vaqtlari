@@ -11,6 +11,8 @@ const tableBody = document.querySelector(".table__body");
 
 const date = new Date();
 const hours = date.getHours();
+const minute = date.getMinutes();
+// console.log(minute)
 // console.log(hours)
 const fragment = document.createDocumentFragment();
 function renderFunction(arr) {
@@ -24,7 +26,9 @@ function renderFunction(arr) {
         firstClone.querySelector(".time__shom").textContent = `${item.times.shom_iftor}`
         firstClone.querySelector(".time__xufton").textContent = `${item.times.hufton}`;
         city.textContent = item.region;
-        if (hours >= Number(item.times.tong_saharlik.slice(0, 2)) && hours < Number(item.times.quyosh.slice(0, 2))) {
+        if (hours >= Number(item.times.tong_saharlik.slice(0, 2)) && hours < Number(item.times.quyosh.slice(0, 2))
+        && minute>item.times.tong_saharlik.slice(3,5) 
+        ) {
             firstClone.querySelector(".site-item__in--one").classList.add("border")
         }
         else if (hours >= Number(item.times.quyosh.slice(0, 2)) && hours < Number(item.times.peshin.slice(0, 2))) {
@@ -131,6 +135,7 @@ haftalik.addEventListener("click", evt => {
     evt.preventDefault();
     list.classList.add("display");
     tableSite.classList.add("block");
+    tableLast.classList.remove("last")
 
 
 
@@ -148,10 +153,11 @@ function MonthRenderFunction(arr) {
 
     arr.forEach(item => {
         monthBody.innerHTML = ""
-        console.group(item)
+
         const threeClone = monttemplate.cloneNode(true);
         threeClone.querySelector(".month_day").textContent = item.day;
-        threeClone.querySelector(".month__data").textContent = item.date;
+        threeClone.querySelector(".month__data").textContent = String(item.date).slice(0, 10);
+        // console.log(String(item.date).slice(0, 10))
         threeClone.querySelector(".month__saharlik").textContent = item.times.tong_saharlik;
         threeClone.querySelector(".month__quyosh").textContent = item.times.quyosh;
         threeClone.querySelector(".month__peshin").textContent = item.times.peshin;
@@ -179,7 +185,15 @@ monthForm.addEventListener("submit", evt => {
     const monthSelectValeu = monthSelect.value;
     MonthGetFunction(`https://islomapi.uz/api/monthly?region=Toshkent&month=${monthSelectValeu}`)
 })
+const oylikBtn = document.querySelector(".oylik");
+const tableLast = document.querySelector(".site-section-table")
+oylikBtn.addEventListener("click", evt => {
+    evt.preventDefault();
+    list.classList.add("display");
+    tableSite.classList.remove("block");
+    tableLast.classList.add("last")
 
+})
 
 
 
