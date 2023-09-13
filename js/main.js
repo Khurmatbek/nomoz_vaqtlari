@@ -9,11 +9,8 @@ const table = document.querySelector(".table");
 const tableBody = document.querySelector(".table__body");
 
 
-const date = new Date();
-const hours = date.getHours();
-const minute = date.getMinutes();
-// console.log(minute)
-// console.log(hours)
+
+
 const fragment = document.createDocumentFragment();
 function renderFunction(arr) {
     list.innerHTML = ""
@@ -26,33 +23,52 @@ function renderFunction(arr) {
         firstClone.querySelector(".time__shom").textContent = `${item.times.shom_iftor}`
         firstClone.querySelector(".time__xufton").textContent = `${item.times.hufton}`;
         city.textContent = item.region;
-        if (hours >= Number(item.times.tong_saharlik.slice(0, 2)) && hours < Number(item.times.quyosh.slice(0, 2))
-        && minute>item.times.tong_saharlik.slice(3,5) 
-        ) {
-            firstClone.querySelector(".site-item__in--one").classList.add("border")
-        }
-        else if (hours >= Number(item.times.quyosh.slice(0, 2)) && hours < Number(item.times.peshin.slice(0, 2))) {
+        
+            const date = new Date();
+            const hours = date.getHours();
+            const minute = date.getMinutes();
+            // console.log(item.times.tong_saharlik.slice(3,5))
+            if (hours == item.times.tong_saharlik.slice(0, 2) && minute >= item.times.tong_saharlik.slice(3, 5)) {
+                firstClone.querySelector(".site-item__in--one").classList.add("border")
+            }
+            else if (hours >= Number(item.times.tong_saharlik.slice(0, 2)) && hours <= Number(item.times.quyosh.slice(0, 2))
+                && minute < item.times.quyosh.slice(3, 5)
+            ) {
+                firstClone.querySelector(".site-item__in--one").classList.add("border")
+            }
+            else if (hours >= Number(item.times.quyosh.slice(0, 2)) && hours <= Number(item.times.peshin.slice(0, 2))
+                && minute < item.times.peshin.slice(3, 5)
+            ) {
 
-            firstClone.querySelector(".site-item__in--twoo").classList.add("border")
-        }
-        else if (hours >= Number(item.times.peshin.slice(0, 2)) && hours < Number(item.times.asr.slice(0, 2))) {
+                firstClone.querySelector(".site-item__in--twoo").classList.add("border")
+            }
+            else if (hours >= Number(item.times.peshin.slice(0, 2)) && hours <= Number(item.times.asr.slice(0, 2))
+                && minute < item.times.asr.slice(3, 5)) {
 
-            firstClone.querySelector(".site-item__in--three").classList.add("border")
-        }
-        else if (hours >= Number(item.times.asr.slice(0, 2)) && hours < Number(item.times.shom_iftor.slice(0, 2))) {
+                firstClone.querySelector(".site-item__in--three").classList.add("border")
+            }
+            else if (hours >= Number(item.times.asr.slice(0, 2)) && hours <= Number(item.times.shom_iftor.slice(0, 2))
+                && minute < item.times.shom.slice(3, 5)
+            ) {
 
-            firstClone.querySelector(".site-item__in--four").classList.add("border")
-        }
-        else if (hours >= Number(item.times.shom_iftor.slice(0, 2)) && hours < Number(item.times.hufton.slice(0, 2))) {
-            firstClone.querySelector(".site-item__in--five").classList.add("border")
-        }
-        else if (hours >= Number(item.times.hufton.slice(0, 2))) {
+                firstClone.querySelector(".site-item__in--four").classList.add("border")
+            }
+            else if (hours >= Number(item.times.shom_iftor.slice(0, 2)) && hours < Number(item.times.hufton.slice(0, 2))
+                && minute < item.times.hufton.slice(3, 5)
+            ) {
+                firstClone.querySelector(".site-item__in--five").classList.add("border")
+            }
+            else if (hours >= Number(item.times.hufton.slice(0, 2)) || hours <= item.times.tong_saharlik.slice(0, 2) && minute < item.times.tong_saharlik.slice(3, 5)) {
+                firstClone.querySelector(".site-item__in--six").classList.add("border")
+            }
+                
+        
+        
 
-            firstClone.querySelector(".site-item__in--six").classList.add("border")
-        }
-
+        // dateFunction()
         /*    minut boyicha ham tekshirish kerak */
         fragment.appendChild(firstClone);
+        
     });
     list.appendChild(fragment);
 }
