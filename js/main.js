@@ -48,7 +48,7 @@ function renderFunction(arr) {
                 firstClone.querySelector(".site-item__in--three").classList.add("border")
             }
             else if (hours >= Number(item.times.asr.slice(0, 2)) && hours <= Number(item.times.shom_iftor.slice(0, 2))
-                && minute < item.times.shom.slice(3, 5)
+                && minute < item.times.shom_iftor.slice(3, 5)
             ) {
 
                 firstClone.querySelector(".site-item__in--four").classList.add("border")
