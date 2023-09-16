@@ -28,7 +28,7 @@ function renderFunction(arr) {
             const hours = date.getHours();
             const minute = date.getMinutes();
             // console.log(item.times.tong_saharlik.slice(3,5))
-            if (hours == item.times.tong_saharlik.slice(0, 2) && minute >= item.times.tong_saharlik.slice(3, 5)) {
+            if (hours => item.times.tong_saharlik.slice(0, 2) && minute >= item.times.tong_saharlik.slice(3, 5)) {
                 firstClone.querySelector(".site-item__in--one").classList.add("border")
             }
             else if (hours >= Number(item.times.tong_saharlik.slice(0, 2)) && hours <= Number(item.times.quyosh.slice(0, 2))
@@ -136,7 +136,7 @@ form.addEventListener("submit", evt => {
     const selectVAlue = select.value;
     localStorage.setItem("citynmae", JSON.stringify(selectVAlue));
     getCity(`https://islomapi.uz/api/present/day?region=${selectVAlue}`);
-    getWeekFunction(`https://islomapi.uz/api/present/week?region=${select.value}`);
+    getWeekFunction(`https://islomapi.uz/api/present/week?region=${selectVAlue}`);
 })
 const gray = document.querySelector(".gray");
 gray.addEventListener("click", evt => {
